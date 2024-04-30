@@ -1,0 +1,149 @@
+.topproducts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 5rem;
+    justify-content: center;
+    
+}
+
+
+
+.top-product{
+    background-color: #f3f3f4;
+    height:40rem;
+    display:grid;
+    grid-template-columns: 1.8fr 2.2fr;
+    overflow: hidden;
+    column-gap: 1rem;
+}
+
+
+
+.top-product:hover{
+    box-shadow: 0rem -0.1rem 2rem -0.7rem rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0rem -0.1rem 2rem -0.7rem rgba(0,0,0,0.75);
+    -moz-box-shadow: 0rem -0.1rem 2rem -0.7rem rgba(0,0,0,0.75);
+}
+
+@media(max-width:1300px){
+    .topproducts{
+        margin:0;
+        display:flex;
+        width:100%;
+        flex-direction: column;
+       
+        
+    }
+
+   
+
+}
+
+.top-product-image{
+    position: relative;
+    transition: all 0.25s ease-in-out;
+}
+
+.top-product-image img{
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+
+.top-product-image:hover{
+    transform:scale(1.3);
+}
+
+
+
+.new-arrival{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    column-gap: 2rem;   
+}
+.new-arrival::-webkit-scrollbar{
+    display: none;
+}
+
+.new-product{
+    flex-shrink: 0;
+    width:35rem;
+
+}
+
+
+.new-arrival-container{
+    margin:9rem 10rem;
+    position: relative; 
+    display:grid;
+    align-items: center;
+}
+
+.new-arrival-container > button{
+    width:5rem;
+    height:10rem;
+    position: absolute;
+    border: none;
+    font-size: 7rem;
+    background-color: transparent;
+}
+
+@media (max-width:1100px) {
+  
+    .new-arrival-container{
+        margin:2rem 6rem;
+    }
+}
+
+
+.instagram-gallery{
+    flex-shrink: 0;
+    display:flex;    
+    animation: slide 40s infinite linear;
+    background-color: black;
+}
+
+.Gallery{
+    display:flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.Gallery:hover > .instagram-gallery{
+    animation-play-state: paused;
+}
+
+.Gallery::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes slide{
+    from{
+        transform:translateX(0);
+    }to{
+        transform: translateX(-100%);
+    }
+}
+
+.insta-images{
+    height:30rem;
+    width:30rem;
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.insta-images > img{
+    position: absolute;
+    object-fit: fill;
+}
+
+.insta-images:hover{
+    opacity: 1;
+}
+
+

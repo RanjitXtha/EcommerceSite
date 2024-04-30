@@ -1,0 +1,38 @@
+.productpage{
+    display:grid;
+    grid-template-columns: 1fr 1.3fr;
+    
+    margin:5rem 10rem;
+}
+
+@media(max-width:1200px){
+    .productpage{
+        display: grid;
+        grid-template-columns: none;
+        row-gap: 10rem;
+        grid-template-rows: 55rem 35rem;
+    }
+}
+
+
+.product-info{
+padding-left:5rem;
+
+}
+
+.product-image{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.wish-button{
+    position: relative;
+    height:6rem;
+    width:6rem;
+    border:none;
+}
+
+

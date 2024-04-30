@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Tenor+Sans&display=swap');
+
+header{
+    display:grid;
+    grid-template-columns: 15rem 1fr 15rem;
+    padding:0px 8rem;
+    height:8rem;
+    align-items: center;
+    font-size: 2.3rem;
+    position: fixed;
+    top:0rem;
+    z-index:15;
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-mid , .header-right{
+    display:flex;
+    justify-content: center;
+    column-gap: 4rem;
+}
+
+.header-logo{
+    font-family: "Allison", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:7rem;
+}
+
+.header-right{
+    font-size:3rem;
+}
+
+.cart-number{
+   position: relative;
+}
+
+.cart-number > div{
+    position: absolute;
+    width:3rem;
+    height:3rem;
+    background-color: black;
+    bottom:-1.5rem;
+    right:-1.5rem;
+    border-radius: 50%;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}

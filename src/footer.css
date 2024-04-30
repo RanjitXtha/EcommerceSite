@@ -1,0 +1,31 @@
+.footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:36rem;
+    color:white;
+    background-color: black;
+    margin-top:5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:2rem;
+}
+
+.footer  p{
+    margin:2rem 0px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.footer nav{
+    margin-bottom: 1.5rem;
+}
+
+
+.footer-logo{
+    font-weight: bolder;
+}
+
+.menu > a{
+    color:white;
+}
