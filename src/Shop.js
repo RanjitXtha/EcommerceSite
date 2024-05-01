@@ -29,7 +29,7 @@ const Shop = () => {
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
-
+ 
   const classes = {
     backgroundColor:'white',
     color:'black',
@@ -47,10 +47,10 @@ const Shop = () => {
       
 
       <div className='category-buttons'>
-        <Link to="/shop"><button style={clickedButton==="ALL"?classes:null} className='shop-button category-button' value="ALL" onClick={() => handleSort('ALL')}>ALL</button></Link>
-        <Link to="/shop/MEN"><button style={clickedButton==="MEN"?classes:null} className='shop-button category-button' onClick={() => handleSort('MEN')}>MEN'S</button></Link>
-        <Link to="/shop/WOMEN"><button style={clickedButton==="WOMEN"?classes:null} className='shop-button category-button' onClick={() => handleSort('WOMEN')}>WOMEN'S</button></Link>
-        <Link to="/shop/ACCESSORIES"><button style={clickedButton==="ACCESSORIES"?classes:null} className='shop-button category-button' onClick={() => handleSort('ACCESSORIES')}>ACCESSORIES</button></Link>
+        <Link to="/shop"><button style={clickedButton==="ALL"?classes:null} className='category-button' value="ALL" onClick={() => handleSort('ALL')}>ALL</button></Link>
+        <Link to="/shop/MEN"><button style={clickedButton==="MEN"?classes:null} className='category-button' onClick={() => handleSort('MEN')}>MEN'S</button></Link>
+        <Link to="/shop/WOMEN"><button style={clickedButton==="WOMEN"?classes:null} className='category-button' onClick={() => handleSort('WOMEN')}>WOMEN'S</button></Link>
+        <Link to="/shop/ACCESSORIES"><button style={clickedButton==="ACCESSORIES"?classes:null} className='category-button' onClick={() => handleSort('ACCESSORIES')}>ACCESSORIES</button></Link>
       </div>
       <div className="product-section">
         {

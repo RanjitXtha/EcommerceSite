@@ -1,23 +1,7 @@
 .productpage{
     display:grid;
     grid-template-columns: 1fr 1.3fr;
-    
     margin:5rem 10rem;
-}
-
-@media(max-width:1200px){
-    .productpage{
-        display: grid;
-        grid-template-columns: none;
-        row-gap: 10rem;
-        grid-template-rows: 55rem 35rem;
-    }
-}
-
-
-.product-info{
-padding-left:5rem;
-
 }
 
 .product-image{
@@ -26,6 +10,25 @@ padding-left:5rem;
     overflow: hidden;
     position: relative;
 }
+
+
+@media(max-width:1200px){
+    .productpage{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-image{
+        height:50vh;
+    }
+}
+
+ 
+.product-info{
+    padding-left:5rem;
+
+}
+
 
 
 .wish-button{

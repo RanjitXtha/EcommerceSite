@@ -141,12 +141,13 @@ h1{
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    border:none;
 }
 
 .product-buttons-button:hover{
     color:black;
     background-color: white;
-    border:3px solid black;
+    border:2px solid black;
 }
 
 @media(max-width:650px){
