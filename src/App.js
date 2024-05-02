@@ -3,7 +3,7 @@ import Header from './header';
 import Home from './Home';
 import Shop from './Shop';
 import ProductPage from './productpage.js'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,Redirect } from 'react-router-dom';
 import { CartProvider } from './cartContext/cartcontext.js';
 import Cart from './mycart.js';
 import { WishProvider } from './cartContext/wishContext.js';
