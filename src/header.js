@@ -45,7 +45,6 @@ const Header = ()=>{
             <div className="header-mid">
                 <nav><Link to="/home">Home</Link></nav>
                 <nav><Link to="/shop">Shop</Link></nav>
-                <nav><a href="/home#Gallery">Gallery</a></nav>
                 <nav><a href="#footer">Contact</a></nav>
             </div>
 
