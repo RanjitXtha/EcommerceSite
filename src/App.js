@@ -27,6 +27,7 @@ function App() {
               <Route path="/product/:id" element={<ProductPage />} />
               <Route path="/mycart" element={<Cart />}/>
               <Route path="/wishlist" element={<Wish />}/>
+              <Redirect from="/" to="/home" />
           </Routes>
           <Footer/>
           </Router>
