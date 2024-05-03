@@ -21,7 +21,7 @@ const Cart = () => {
   const totalCost = cartItems.reduce((total, item) => total + item.quantity*item.price, 0);
 
   return (
-    <div style={{margin:'100px 150px'}}>
+    <div style={{margin:'10rem 15rem'}}>
       <div className="cart-titles">
         <h2>Product</h2>
         <h2>Title</h2>
@@ -36,14 +36,14 @@ const Cart = () => {
           <p>$ {item.price}</p>
           <div className="quantity-button">
             <p style={{marginLeft:'12%'}}>{item.quantity}</p>
-            <button onClick={() => increasequantity(index)}>+</button>
-            <button onClick={() => decreasequantity(index)}>-</button>
+            <button style={{fontSize:'100%'}} onClick={() => increasequantity(index)}>+</button>
+            <button  style={{fontSize:'100%'}} onClick={() => decreasequantity(index)}>-</button>
           </div>
-          <button className="shop-button" onClick={() => removeItem(index)}>Remove</button>
+          <button style={{fontSize:'100%'}} className="shop-button" onClick={() => removeItem(index)}>Remove</button>
         </div>
       ))}
-      <h2 style={{marginTop:'50px'}}>Price: $ {totalCost}</h2>
-      <button style ={{width:'130px',marginTop:'50px'}} className='shop-button' onClick={clearCart}>Clear Cart</button>
+      <h2 style={{marginTop:'5rem'}}>Price: $ {totalCost}</h2>
+      <button style ={{width:'13rem',marginTop:'5rem',fontSize:'100%'}} className='shop-button' onClick={clearCart}>Clear Cart</button>
     </div>
   );
 };

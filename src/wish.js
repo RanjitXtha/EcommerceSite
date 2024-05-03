@@ -4,7 +4,7 @@ import { WishContext } from './cartContext/wishContext';
 const Cart = () => { 
   const { wishItems, removeFromWish, clearWish} = useContext(WishContext);
   return (
-    <div style={{margin:'100px 150px'}}>
+    <div style={{margin:'10rem 15rem'}}>
       <div className="cart-titles">
         <h2>Product</h2>
         <h2>Title</h2>
@@ -18,10 +18,10 @@ const Cart = () => {
           </div>
           <p>{item.name}</p>
           <p>$ {item.price}</p>
-          <button className="shop-button" onClick={() => removeFromWish(index)}>Remove</button>
+          <button style={{fontSize:'100%'}} className="shop-button" onClick={() => removeFromWish(index)}>Remove</button>
         </div>
       ))}
-      <button style ={{width:'130px',marginTop:'50px'}} className='shop-button' onClick={clearWish}>Clear Cart</button>
+      <button style ={{width:'13rem',marginTop:'5rem' , fontSize:'100%'}} className='shop-button' onClick={clearWish}>Clear Cart</button>
     </div>
   );
 };
