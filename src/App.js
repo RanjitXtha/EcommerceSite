@@ -30,7 +30,7 @@ function App() {
             <ScrollToTop/>
             <Header />
             <Routes>
-              <Route path="/EcommerceSite/" element={<Home />} />
+              <Route path="/EcommerceSite" element={<Home />} />
               <Route index path="/home" element={<Home />} />
               <Route path="/shop" element={<Shop/>} />
               <Route path="/shop/:id" element={<Shop/>} />
