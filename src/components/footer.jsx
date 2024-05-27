@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import './footer.css';
+import '../cssFiles/footer.css';
  
 const Footer = ()=>{
     return(

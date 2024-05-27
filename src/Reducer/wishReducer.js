@@ -1,4 +1,5 @@
 export const wishReducer = (state, action) => {
+  console.log(state);
     switch (action.type) {
       case 'ADD_WISH':
         return [...state, action.payload];

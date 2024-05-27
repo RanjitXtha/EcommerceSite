@@ -1,16 +1,16 @@
-import './Home.css';
-import summer1 from './images/summerpic1.jpg';
-import summer2 from './images/summerpic2.png';
-import summer3 from './images/summer3.png';
-import summer4 from './images/summer4.png';
+import '../cssFiles/Home.css';
+import summer1 from '../images/summerpic1.jpg';
+import summer2 from '../images/summerpic2.png';
+import summer3 from '../images/summer3.png';
+import summer4 from '../images/summer4.png';
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { TbTruckDelivery } from "react-icons/tb";
 import { RiSecurePaymentFill } from "react-icons/ri";
-import men from './images/men.png';
-import women from './images/women.jpg';
-import accessories from './images/accesories.jpg';
-import deals from './images/deals.jpg';
-import {TopProducts , NewArrival ,Gallery} from './topproducts';
+import men from '../images/men.png';
+import women from '../images/women.jpg';
+import accessories from '../images/accesories.jpg';
+import deals from '../images/deals.jpg';
+import {TopProducts , NewArrival ,Gallery} from '../components/topproducts';
 import { Link } from 'react-router-dom';
 
 const Home = ()=>{

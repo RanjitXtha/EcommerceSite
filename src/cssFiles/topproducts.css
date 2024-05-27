@@ -51,11 +51,6 @@
     position: absolute;
 }
 
-.top-product-image:hover{
-    transform:scale(1.3);
-}
-
-
 
 .new-arrival{
     overflow-x: scroll;

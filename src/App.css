@@ -144,16 +144,6 @@ h1{
     border:none;
 }
 
-.product-buttons-button:hover{
-    color:black;
-    background-color: white;
-    border:2px solid black;
-}
 
-@media(max-width:650px){
-    .product-buttons-button{
-        width:5rem;
-        height:5rem;
-    }
-}
+
 

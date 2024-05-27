@@ -2,6 +2,22 @@
     display:grid;
     grid-template-columns: 1fr 1.3fr;
     margin:5rem 10rem;
+    position: relative;
+}
+
+.productpage > button{
+    position: absolute;
+    top:2rem;
+    right:2rem;
+    z-index: 10;
+    width:10rem;
+    
+}
+
+.small-pic{
+    width:5rem;
+    height: 5rem;
+    border-radius: 50%;
 }
 
 .product-image{

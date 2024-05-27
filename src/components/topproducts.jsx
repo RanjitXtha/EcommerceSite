@@ -1,25 +1,25 @@
-import './topproducts.css'
+import '../cssFiles/topproducts.css'
 import { AiOutlineHeart } from "react-icons/ai";
 import { BsCart } from "react-icons/bs";
 import { Link } from 'react-router-dom';
-import { products } from './data';
-import { WishContext } from './cartContext/wishContext';
-import { CartContext } from './cartContext/cartcontext';
-import { useContext, useRef ,useState} from 'react';
+import { WishContext } from '../cartContext/wishContext';
+import { CartItemContext } from '../cartContext/cartcontext';
 import { AiOutlineRight } from "react-icons/ai";
 import { AiOutlineLeft } from "react-icons/ai";
-import insta1 from './images/insta1.jpg';
-import insta2 from './images/insta2.jpg';
-import insta3 from './images/insta3.jpg';
-import insta4 from './images/insta4.jpg';
-import insta5 from './images/insta5.jpg';
-import insta6 from './images/insta6.jpg';
-
+import insta1 from '../images/insta1.jpg';
+import insta2 from '../images/insta2.jpg';
+import insta3 from '../images/insta3.jpg';
+import insta4 from '../images/insta4.jpg';
+import insta5 from '../images/insta5.jpg';
+import insta6 from '../images/insta6.jpg';
+import { ProductContext } from '../cartContext/productContext.js';
+import { useContext,useState} from 'react';
 
 const TopProducts = ()=>{
+    const {products} = useContext(ProductContext);
     const topProducts = products.slice(0,4);
     const {addToWish} = useContext(WishContext);
-    const {addToCart} = useContext(CartContext);
+    const {addToCart} = useContext(CartItemContext);
 
     const addItemToWish = (item)=>{
         addToWish(item);
@@ -35,23 +35,40 @@ const TopProducts = ()=>{
             <div className="topproducts">
                 {
                     topProducts.map((item,index)=>(
-                        
+                        <Link to={`/product/${item.productId}`}>
                         <div className="top-product" key={item.id}>
-                            <div className="top-product-image">
-                                <Link to={`/product/${item.id}`}>
-                                    <img src={item.image} alt={index} loading="lazy"/>
-                                </Link></div>
-                             <div className="product-info">
-                                <p>{item.name}</p>
-                                <p className="product-price">$ {item.price}</p>
-
-                                <div style={{display:'flex',columnGap:'20px'}}>
-                                    <button className="product-buttons-button" onClick={()=>addItemToWish(item)}><AiOutlineHeart/></button>
-                                    <button className="product-buttons-button" onClick={()=>addItemToCart(item)}><BsCart/></button>
+                           
+                                <div className="top-product-image">
+                                    <img src={item.photoURLs} alt={index} loading="lazy"/>
                                 </div>
-                            </div>
+
+                                <div className="product-info">
+                                    <p>{item.name}</p>
+                                    <p className="product-price">$ {item.price}</p>
+
+                                    <div style={{display:'flex',columnGap:'20px'}}>
+                                        <button className="product-buttons-button" onClick={
+                                            (e)=>{
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                addItemToWish(item);
+                                            }
+                                            }><AiOutlineHeart/>
+                                        </button>
+
+                                        <button className="product-buttons-button" onClick={
+                                            (e)=>{
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                addItemToCart(item);
+                                            }                                     
+                                            }><BsCart/>
+                                        </button>
+                                    </div>                            
+                                </div>
+                            
                         </div>
-        
+                        </Link>
                     ))
                 }
 
@@ -65,7 +82,7 @@ const TopProducts = ()=>{
 
 const NewArrival = ()=>{
     const [scrollPosition, setScrollPosition] = useState(0);
-
+    const {products} = useContext(ProductContext);
     const handleScroll = (direction) => {
     const productSelect = document.querySelector('.new-product') ;
     const container = document.querySelector('.new-arrival');
@@ -85,9 +102,9 @@ const NewArrival = ()=>{
             <div className='new-arrival'>
                 {
                     products.slice(0,7).map((item,index)=>(
-                        <Link to={`/product/${item.id}`}>
-                            <div className="product new-product" key={item.id}>
-                            <div className="product-img"><img src={item.image} alt={index} /></div>
+                        <Link to={`/product/${item.productId}`}>
+                            <div className="product new-product" key={item.productId}>
+                            <div className="product-img"><img src={item.photoURLs} alt={index} /></div>
                             <div className='product-info'>
                                 <p>{item.name}</p>
                                 <p className="product-price">$ {item.price}</p>

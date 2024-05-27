@@ -1,5 +1,5 @@
 import React ,{useContext} from 'react';
-import { WishContext } from './cartContext/wishContext';
+import { WishContext } from '../cartContext/wishContext';
 
 const Cart = () => { 
   const { wishItems, removeFromWish, clearWish} = useContext(WishContext);
@@ -14,7 +14,7 @@ const Cart = () => {
       {wishItems.map((item, index) => (
         <div className="cart-product" key={index}>
           <div className='cart-product-image'>
-            <img src={item.image} alt={index}/>
+            <img src={item.photoURLs} alt={index}/>
           </div>
           <p>{item.name}</p>
           <p>$ {item.price}</p>

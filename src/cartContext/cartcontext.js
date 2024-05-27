@@ -1,10 +1,10 @@
 import React, { useEffect, createContext, useReducer } from 'react';
 import { cartReducer } from '../Reducer/cartReducer';
 
-const CartContext = createContext();
+const CartItemContext = createContext();
 
 
-const CartProvider = ({children})=>{
+const CartItemProvider = ({children})=>{
     const [cartItems, dispatch] = useReducer(cartReducer, [], () => {
         const storedCartItems = localStorage.getItem('cartItems');
         return storedCartItems ? JSON.parse(storedCartItems) : [];
@@ -15,11 +15,10 @@ const CartProvider = ({children})=>{
       }, [cartItems]);
 
       const addToCart = (item, value) => {
-        const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-
+        const existingItem = cartItems.find((cartItem) => cartItem.productId === item.productId);
         if (existingItem) {
           const updatedCart = cartItems.map((cartItem) =>
-            cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + value } : cartItem
+            cartItem.productId === item.productId ? { ...cartItem, quantity: cartItem.quantity + value } : cartItem
           );
           dispatch({ type: 'UPDATE_CART_ITEM', payload: updatedCart });
         } else {
@@ -36,10 +35,10 @@ const CartProvider = ({children})=>{
       };
 
       return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeItem, clearCart }}>
+        <CartItemContext.Provider value={{ cartItems, addToCart, removeItem, clearCart }}>
           {children}
-        </CartContext.Provider>
+        </CartItemContext.Provider>
       );
 }
 
-export { CartProvider, CartContext };
+export { CartItemProvider, CartItemContext };

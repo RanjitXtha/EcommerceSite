@@ -50,3 +50,25 @@ header{
     align-items: center;
     font-size: 1.7rem;
 }
+
+.user-profile{
+    position:relative;
+    font-size: 2.2rem;
+}
+
+.user-profile > div{
+    position: absolute;
+    background-color: white;
+    min-width:24rem;
+    top:5rem;
+    right:-4rem;
+    box-shadow: 2px 1px 20px black;
+    padding:2rem;
+}
+
+.profile-nav{
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}

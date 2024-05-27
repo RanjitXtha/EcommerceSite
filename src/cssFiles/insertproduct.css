@@ -1,0 +1,17 @@
+.image-preview{
+    width:20rem;
+
+    position: relative;
+}
+
+.image-preview > button{
+    width:4rem;
+    height:4rem;
+    position: absolute;
+    top:-1.5rem;
+    right:-1rem;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 2rem;
+}

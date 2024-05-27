@@ -16,7 +16,7 @@ const WishProvider = ({children})=>{
       }, [wishItems]);
 
       const addToWish = (item) => {
-        if(!wishItems.find(e=>e.id===item.id)){
+        if(!wishItems.find(e=>e.productId===item.productId)){
             return dispatch({ type: 'ADD_WISH', payload: item });
         }else{
           return null;

@@ -5,7 +5,7 @@ export const sortReducer = (state, action) => { // state = current state so it c
         if (action.payload === 'ALL') {
           return action.products; 
         } else {
-          return action.products.filter(item => item.category === action.payload);
+          return action.products.filter(item => item.category.toUpperCase() === action.payload);
         }
       default:
         return state;

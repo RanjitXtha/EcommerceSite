@@ -1,9 +1,9 @@
 import React ,{useContext , useState} from 'react';
-import { CartContext } from './cartContext/cartcontext';
-import './cart.css';
+import { CartItemContext } from '../cartContext/cartcontext';
+import '../cssFiles/cart.css';
 
 const Cart = () => { 
-  const { cartItems,addToCart, removeItem, clearCart } = useContext(CartContext);
+  const { cartItems,addToCart, removeItem, clearCart } = useContext(CartItemContext);
   
   const increasequantity =(index)=>{
     const updatedItem = cartItems[index];
@@ -31,13 +31,13 @@ const Cart = () => {
       </div>
       {cartItems.map((item, index) => (
         <div className="cart-product" key={index}>
-          <div className="cart-product-image"><img src={item.image} /></div>
+          <div className="cart-product-image"><img src={item.photoURLs} /></div>
           <p>{item.name}</p>
           <p>$ {item.price}</p>
           <div className="quantity-button">
             <p style={{marginLeft:'12%'}}>{item.quantity}</p>
             <button style={{fontSize:'100%'}} onClick={() => increasequantity(index)}>+</button>
-            <button  style={{fontSize:'100%'}} onClick={() => decreasequantity(index)}>-</button>
+            <button style={{fontSize:'100%'}} onClick={() => decreasequantity(index)}>-</button>
           </div>
           <button style={{fontSize:'100%'}} className="shop-button" onClick={() => removeItem(index)}>Remove</button>
         </div>
