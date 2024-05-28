@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EcommerceSite/static/css/main.0b097fd1.css",
-    "main.js": "/EcommerceSite/static/js/main.c5603ba2.js",
-    "static/js/453.af178710.chunk.js": "/EcommerceSite/static/js/453.af178710.chunk.js",
+    "main.js": "/EcommerceSite/static/js/main.05d64c0e.js",
+    "static/js/453.2d40735f.chunk.js": "/EcommerceSite/static/js/453.2d40735f.chunk.js",
     "static/media/summerpic2.png": "/EcommerceSite/static/media/summerpic2.bb6d4bc7e2c0cad72f1c.png",
     "static/media/summer3.png": "/EcommerceSite/static/media/summer3.094ea00b19557e835fe8.png",
     "static/media/summer4.png": "/EcommerceSite/static/media/summer4.0fafae2fb7f2883fcfc6.png",
@@ -19,11 +19,11 @@
     "static/media/women.jpg": "/EcommerceSite/static/media/women.4afeb1ca3be89dc1479f.jpg",
     "index.html": "/EcommerceSite/index.html",
     "main.0b097fd1.css.map": "/EcommerceSite/static/css/main.0b097fd1.css.map",
-    "main.c5603ba2.js.map": "/EcommerceSite/static/js/main.c5603ba2.js.map",
-    "453.af178710.chunk.js.map": "/EcommerceSite/static/js/453.af178710.chunk.js.map"
+    "main.05d64c0e.js.map": "/EcommerceSite/static/js/main.05d64c0e.js.map",
+    "453.2d40735f.chunk.js.map": "/EcommerceSite/static/js/453.2d40735f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0b097fd1.css",
-    "static/js/main.c5603ba2.js"
+    "static/js/main.05d64c0e.js"
   ]
 }
