@@ -14,6 +14,7 @@ import Register from './pages/register.jsx';
 import Login from './pages/login.jsx'; 
 import InsertProduct from './pages/insertProduct.jsx';
 import EditProduct from './pages/editProduct.jsx';
+import NotFound from './pages/notfound.jsx';
 import { ProductContextProvider } from './cartContext/productContext.js';
 import { useContext } from 'react';
 import { UsersContext } from './cartContext/userContext.js';
@@ -45,6 +46,7 @@ function App() {
               <Route path="/login" element={<Login />}/>
               <Route path="/insertproduct" element={<InsertProduct />}/>
               <Route path="/editproduct/:id" element={<EditProduct />}/>
+              <Route path="*" element={<NotFound />} />
               
           </Routes>
           <Footer/>
