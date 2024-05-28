@@ -92,7 +92,7 @@ const InsertProduct = () => {
           });
 
           console.log('Product successfully uploaded with images.');
-          navigate('/'); // Adjust the path to navigate after upload
+          navigate('/');
 
       } catch (error) {
           console.log("Error:", error);
