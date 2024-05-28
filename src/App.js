@@ -20,7 +20,7 @@ import { UsersContext } from './cartContext/userContext.js';
 
 function App() {
   const {currentUser} = useContext(UsersContext);
-
+  //App
   return (
     <div className="App">
       <ProductContextProvider>
