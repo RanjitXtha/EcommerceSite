@@ -36,17 +36,13 @@ function App() {
               <Route path="/shop" element={<Shop/>} />
               <Route path="/shop/:id" element={<Shop/>} />
               <Route path="/product/:id" element={<ProductPage />} />
-              {
-                currentUser?<Route path="/mycart" element={<Cart />}/>:<Login />
-              }
-              {
-                currentUser? <Route path="/wishlist" element={<Wish />}/>:<Login />
-              }    
+              <Route path="/mycart" element={currentUser?<Cart />:<Login />  }/>           
+              <Route path="/wishlist" element={currentUser?<Wish />:<Login /> }/>
               <Route path="/register" element={<Register />}/>
               <Route path="/login" element={<Login />}/>
               <Route path="/insertproduct" element={<InsertProduct />}/>
               <Route path="/editproduct/:id" element={<EditProduct />}/>
-              <Route path="*" element={<NotFound />} />
+              
               
           </Routes>
           <Footer/>
