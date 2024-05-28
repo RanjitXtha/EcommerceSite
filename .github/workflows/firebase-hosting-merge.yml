@@ -9,6 +9,10 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:[4.3.3]
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
