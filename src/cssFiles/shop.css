@@ -8,7 +8,7 @@
     column-gap: 2rem;
     font-size: 2.5rem;
     row-gap:8rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
 }
 
 
@@ -87,7 +87,7 @@
     display: flex;
     justify-content: end;
     column-gap: 2rem;
-    margin:10rem 0rem;
+    
 }
 
 .searchbar > input{

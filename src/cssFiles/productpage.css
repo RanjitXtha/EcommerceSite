@@ -1,7 +1,8 @@
 .productpage{
     display:grid;
     grid-template-columns: 1fr 1.3fr;
-    margin:5rem 10rem;
+    margin:0rem 10rem;
+    height:100vh;
     position: relative;
 }
 
@@ -10,8 +11,7 @@
     top:2rem;
     right:2rem;
     z-index: 10;
-    width:10rem;
-    
+    width:10rem; 
 }
 
 .small-pic{
@@ -35,7 +35,7 @@
     }
 
     .product-image{
-        height:50vh;
+        height:100rem;
     }
 }
 
