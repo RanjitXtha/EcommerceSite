@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EcommerceSite/static/css/main.9e07d0fe.css",
-    "main.js": "/EcommerceSite/static/js/main.ab189912.js",
+    "main.js": "/EcommerceSite/static/js/main.efd5426d.js",
     "static/js/453.2d40735f.chunk.js": "/EcommerceSite/static/js/453.2d40735f.chunk.js",
     "static/media/summerpic2.png": "/EcommerceSite/static/media/summerpic2.bb6d4bc7e2c0cad72f1c.png",
     "static/media/summer3.png": "/EcommerceSite/static/media/summer3.094ea00b19557e835fe8.png",
@@ -19,11 +19,11 @@
     "static/media/women.jpg": "/EcommerceSite/static/media/women.4afeb1ca3be89dc1479f.jpg",
     "index.html": "/EcommerceSite/index.html",
     "main.9e07d0fe.css.map": "/EcommerceSite/static/css/main.9e07d0fe.css.map",
-    "main.ab189912.js.map": "/EcommerceSite/static/js/main.ab189912.js.map",
+    "main.efd5426d.js.map": "/EcommerceSite/static/js/main.efd5426d.js.map",
     "453.2d40735f.chunk.js.map": "/EcommerceSite/static/js/453.2d40735f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9e07d0fe.css",
-    "static/js/main.ab189912.js"
+    "static/js/main.efd5426d.js"
   ]
 }
