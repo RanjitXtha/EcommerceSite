@@ -20,7 +20,7 @@ const Shop = () => {
       dispatch({ type: 'FILTER_BY_CATEGORY', payload: id || 'ALL', products: products });
     }
   }, [id, products]);
-
+ 
   const handleSort = (category) => {
     setButton(id || 'ALL');
     dispatch({ type: 'FILTER_BY_CATEGORY', payload: category, products: products });
