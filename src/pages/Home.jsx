@@ -19,11 +19,7 @@ const Home = ()=>{
         <div>
             <div className="top-section">
                 <div>
-                    <picture>
-                        <source media="(max-width: 650px)" srcSet={summer4}/>
-                        <source media="(max-width: 1350px)" srcSet={summer3}/>
-                        <img  src={summer2}/>
-                    </picture>
+                    <img src={summer2} alt="herosection" />
                 </div>
                 
                 <div className='top-info'>

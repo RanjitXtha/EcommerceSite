@@ -39,7 +39,7 @@ const TopProducts = ()=>{
                         <div className="top-product" key={item.id}>
                            
                                 <div className="top-product-image">
-                                    <img src={item.photoURLs} alt={index} loading="lazy"/>
+                                    <img src={item.photoURLs[0]} alt={index} loading="lazy"/>
                                 </div>
 
                                 <div className="product-info">
@@ -96,15 +96,17 @@ const NewArrival = ()=>{
       setScrollPosition(container.scrollLeft);
     };
 
+    console.log(products);
+
     return(
         <div className='new-arrival-container' >
             <p className='titles'>New Arrivals</p>
             <div className='new-arrival'>
                 {
-                    products.slice(0,7).map((item,index)=>(
+                   products &&  products.slice(0,7).map((item,index)=>(
                         <Link to={`/product/${item.productId}`}>
                             <div className="product new-product" key={item.productId}>
-                            <div className="product-img"><img src={item.photoURLs} alt={index} /></div>
+                            <div className="product-img"><img src={item.photoURLs[0]} alt={index} /></div>
                             <div className='product-info'>
                                 <p>{item.name}</p>
                                 <p className="product-price">$ {item.price}</p>

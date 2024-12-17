@@ -3,7 +3,7 @@
 .top-section{
     width: 100%;
     position:relative;
-    height:100vh;
+    height:75rem;
 }
 .top-section >div{
     height:100%;
@@ -29,6 +29,12 @@
     margin-bottom:5rem;
 }
 
+.max-container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
 
 @media(max-width:800px ){
     .top-info{
@@ -37,12 +43,6 @@
     }
 }
 
-@media(max-width:650px ){
-    .top-section{
-        height:50vh;
-    }
-  
-}
 
 .services{
     margin:10rem 10rem;
@@ -96,6 +96,10 @@
     width:25vw;
     background-color: rgb(34, 90, 38);
     position: relative;
+}
+
+.categories-types > img{
+     object-fit: cover;
 }
 
 
