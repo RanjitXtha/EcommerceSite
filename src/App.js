@@ -2,8 +2,8 @@ import './App.css';
 import Header from './components/header';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import ProductPage from './pages/productpage.jsx'
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import ProductPage from './pages/productpage.jsx';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { CartItemProvider } from './cartContext/cartcontext.js';
 import Cart from './pages/mycart.jsx';
 import { WishProvider } from './cartContext/wishContext.js';
@@ -20,35 +20,37 @@ import { useContext } from 'react';
 import { UsersContext } from './cartContext/userContext.js';
 
 function App() {
-  const {currentUser} = useContext(UsersContext);
-  //App
+  const { currentUser } = useContext(UsersContext);
+
   return (
-    <div className="App">
+    <div className="App max-container">
       <ProductContextProvider>
-      <CartItemProvider>
-        <WishProvider>
-          <Router>
-            <ScrollToTop/>
-            <Header />
-            <Routes>
-              <Route path="/EcommerceSite" element={<Home />} />
-              <Route index path="/home" element={<Home />} />
-              <Route path="/shop" element={<Shop/>} />
-              <Route path="/shop/:id" element={<Shop/>} />
-              <Route path="/product/:id" element={<ProductPage />} />
-              <Route path="/mycart" element={currentUser?<Cart />:<Login />  }/>           
-              <Route path="/wishlist" element={currentUser?<Wish />:<Login /> }/>
-              <Route path="/register" element={<Register />}/>
-              <Route path="/login" element={<Login />}/>
-              <Route path="/insertproduct" element={<InsertProduct />}/>
-              <Route path="/editproduct/:id" element={<EditProduct />}/>
-              
-              
-          </Routes>
-          <Footer/>
-          </Router>
+        <CartItemProvider>
+          <WishProvider>
+            <Router>
+              <ScrollToTop />
+              <Header />
+              <div className="main-container">
+                <Routes>
+                  <Route path="/EcommerceSite" element={<Home />} />
+                  <Route index path="/" element={<Home />} />
+                  <Route index path="/home" element={<Home />} />
+                  <Route path="/shop" element={<Shop />} />
+                  <Route path="/shop/:id" element={<Shop />} />
+                  <Route path="/product/:id" element={<ProductPage />} />
+                  <Route path="/mycart" element={currentUser ? <Cart /> : <Login />} />
+                  <Route path="/wishlist" element={currentUser ? <Wish /> : <Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/insertproduct" element={<InsertProduct />} />
+                  <Route path="/editproduct/:id" element={<EditProduct />} />
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </div>
+              <Footer />
+            </Router>
           </WishProvider>
-      </CartItemProvider>
+        </CartItemProvider>
       </ProductContextProvider>
     </div>
   );

@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 const Home = ()=>{
 
     return(
+        <section>
         <div>
             <div className="top-section">
                 <div>
@@ -59,7 +60,7 @@ const Home = ()=>{
                 </div>
             </div>
 
-            <div className="categories">
+            <div className="categories max-container">
                 <Link to="/shop/MEN">
                     <div className="categories-types">
                     <img src={men} alt="men" loading="lazy"/>
@@ -104,6 +105,7 @@ const Home = ()=>{
 
             
         </div>
+        </section>
     )
 }
 

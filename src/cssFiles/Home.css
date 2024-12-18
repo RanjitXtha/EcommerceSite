@@ -76,7 +76,7 @@
     align-items: center;
     justify-content:center; 
 }
-
+ 
 .categories{
     margin:10rem 0rem;
     display:flex;
@@ -93,7 +93,9 @@
 
 .categories-types{
     height:32vw;
+    max-height:80rem;
     width:25vw;
+    max-width:55rem;
     background-color: rgb(34, 90, 38);
     position: relative;
 }

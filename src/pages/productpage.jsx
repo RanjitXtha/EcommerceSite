@@ -42,7 +42,7 @@ const ProductPage = ()=>{
         <div>
             <div className="productpage">
                <button onClick={()=>navigate(`/editproduct/${id}`)} className="shop-button">Edit</button>
-                <div className="product-image">
+                <div className="product-image ">
                 {
                     product.photoURLs && <img  style={{objectFit:"contain"}} src={product.photoURLs[currentIndex]} alt={product.name} /> 
                 }
