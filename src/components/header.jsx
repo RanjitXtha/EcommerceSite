@@ -96,7 +96,7 @@ const Header = ()=>{
     }, [headerButtonRef]);
 
     return(
-        <header style={isVisible==='true'?null:{top:'-100px'}}>
+        <header className="max-container" style={isVisible==='true'?null:{top:'-100px'}}>
             <div className="header-logo">Dhoko</div>
 
             <div className="header-mid">

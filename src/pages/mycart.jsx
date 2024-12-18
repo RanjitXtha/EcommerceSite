@@ -21,7 +21,7 @@ const Cart = () => {
   const totalCost = cartItems.reduce((total, item) => total + item.quantity*item.price, 0);
 
   return (
-    <div style={{margin:'10rem 15rem'}}>
+    <div style={{margin:'10rem 15rem',height:'100vh'}}>
       <div className="cart-titles">
         <h2>Product</h2>
         <h2>Title</h2>

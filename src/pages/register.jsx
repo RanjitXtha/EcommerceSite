@@ -90,7 +90,7 @@ const Register = () => {
   };
 
   return (
-    <div style={{margin:'2rem 5rem'}}>
+    <div style={{margin:'2rem 5rem',height:'100vh'}}>
       <a href="/home" style={{fontSize:'3rem'}}>Back to Home</a>
       <h1>Register page</h1>
       <form onSubmit={handleSubmit} style={formStyle}>

@@ -4,7 +4,7 @@ import { WishContext } from '../cartContext/wishContext';
 const Cart = () => { 
   const { wishItems, removeFromWish, clearWish} = useContext(WishContext);
   return (
-    <div style={{margin:'10rem 15rem'}}>
+    <div style={{margin:'10rem 15rem',height:'100vh'}}>
       <div className="cart-titles">
         <h2>Product</h2>
         <h2>Title</h2>

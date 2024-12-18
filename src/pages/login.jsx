@@ -46,7 +46,7 @@ const Login = () => {
 
 
   return (
-    <div className="main-content" style={{margin:'2rem 5rem'}}>
+    <div className="main-content" style={{margin:'2rem 5rem' , height:'100vh'}}>
         <a href="/home" style={{fontSize:'3rem'}}>Back to Home</a>
       <h1>Login page</h1>
       <form onSubmit={handleSubmit} style={formStyle}>
